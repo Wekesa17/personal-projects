@@ -1,0 +1,65 @@
+/* UNIVERSAL RESET */
+* { margin: 0; padding: 0; box-sizing: border-box;
+
+}
+body {
+    background-color: #1a202c; /* Deep Dark Blue */ 
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+header { padding: 40px 0; }
+header h1{ color: #fbd38d; letter-spacing: 3px; }
+/* FLEX LAYOUT (The side-by-side logic) */
+.pricing-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Important: Allows cards to stack on mobile */
+    margin-bottom: 40px;
+}
+.card {
+    background-color: #2d3748;
+    padding: 30px;
+    border-radius: 12px;
+    width: 280px;
+    border: 1px solid #4a5568;
+    transition: 0.3s; /* smooth animation */
+}
+/* HOVER EFFECT */
+.card:hover {
+    border-color: #fbd38d
+    transform translateY(-10px); /* Moves cards up slightly */
+}
+.price {
+    font-size: 1.5rem; font-weight: bold; margin: 15px 0; color: #fbd38d;
+}
+ul {
+    list-style: none; padding-top: 10px; font-size: 0,9rem;
+}
+/* FORM STYLING */
+.checker-box {
+    background: #2d3748;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+}
+input {
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px;
+    background:  #fbd38d;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#resultdisplay { margin-top: 20px; font-weight: bold; font-size: 1.2rem; }
+

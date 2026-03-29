@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Nairobi Tech Hub | Membership</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>NAIROBI TECH HUB</h1>
+            <p>Innovating The Future Of Kenya</p>
+        </header>
+        <div class="container">
+            <section class="pricing-row">
+                <div class="card">
+                    <h3>Student Plan</h3>
+                    <p class="Price">Ksh. 500 /month</p>
+                    <ul>
+                        <li>Free High-speed Wi-fi</li>
+                        <li>Access To study Hall</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Professional Plan</h3>
+                    <p class="Price">Ksh. 2000 /month</p>
+                    <ul>
+                        <li>Private Meeting Rooms</li>
+                        <li>Cloud Server Hosting</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="checker-box">
+                <h3>Check Your Eligibility</h3>
+                <input type="number" id="userAge" placeholder="Enter Your Age">
+                <button onclick="checkPlan()">Check Plan</button>
+                <p id="resultDisplay"></p>
+            </section>
+        </div>
+        <script>
+            function checkPlan() {
+                // 1. Get the value from the input field
+                let age = document.getElementById('userAge').value;
+                // 2. Find the display paragraph
+                let display = document.getElementById('resultDisplay');
+                // 3. Conditional Logic (if/Else)
+                if (age === "") {
+                    display.innerText = "Please enter an age first!";
+                    display.style.color = "yellow";
+                }
+                else if (age < 18) {
+                    display.innerText = "Minor: Guardian signature required.";
+                    display.style.color = "#ff4d4d"; // RED
+                }
+                else if (age >= 18 && age <= 25){
+                    display.innerText = "Success: You have qualify for the Student Discount!";
+                    display.style.color = "#4dff88"; // Green
+                }
+                else {
+                    display.innerText = "Welcome: Professional Tier access granted.";
+                    display.style.color = "#4db8ff"; // Blue
+                }
+            }
+        </script>
+    </body>
+</html>
+
